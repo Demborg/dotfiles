@@ -1,0 +1,20 @@
+! Reload this file using ~ > xrdb ~/.Xresources~
+! ------------------------------------------------------------------------------
+! ROFI Color theme, tried to follow the colors in arc darker theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Rofi color meanings                bg            fg      bgalt         hlfg    hlbg
+! Color scheme for normal row
+rofi.color-normal:                   argb:bb2f343f,#f3f4f5,argb:bb2f343f,#5294e2,#f3f4f5
+! Color scheme for urgent row
+rofi.color-urgent:                   argb:bb2f343f,#e53935,argb:bb2f343f,#5294e2,#e53935
+! Color scheme for active row
+rofi.color-active:                   argb:bb2f343f,#676e7d,argb:bb2f343f,#5294e2,#676e7d
+! Color scheme window
+rofi.color-window:                   argb:bb2f343f,argb:bb2f343f 
+! Separator style (none, dash, solid)
+rofi.separator-style:                none
+
+rofi.switchers: window,run,ssh
+
