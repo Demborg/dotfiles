@@ -22,7 +22,7 @@ values."
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+     ;; ---------------------------------------------------------------
      auto-completion
      spotify
      better-defaults
@@ -259,7 +259,7 @@ layers configuration. You are free to put any user code."
         org-src-tab-acts-natively t)
 
   (org-babel-do-load-languages
-   'org-babel-load-languages '((python . t)))
+   'org-babel-load-languages '((python . t)(C . t)))
 
   ;;Open links in google chrome beta
   (setq browse-url-browser-function 'browse-url-generic
