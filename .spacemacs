@@ -33,7 +33,9 @@ values."
      octave
      python
      colors
-     c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      java
      markdown
      org
@@ -269,6 +271,14 @@ layers configuration. You are free to put any user code."
 
   ;;Org mode reasonably sized images
   (setq org-image-actual-width nil)
+
+
+  ;;c++11 as standard
+  (add-hook 'c++-mode-hook
+              (lambda ()
+                (setq company-clang-arguments '("-std=c++11"))
+                (setq flycheck-clang-language-standard "c++11")
+                ))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -278,7 +288,22 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-latex-default-packages-alist
+   (quote
+    (("AUTO" "inputenc" t)
+     ("T1" "fontenc" t)
+     ("" "fixltx2e" nil)
+     ("" "graphicx" t)
+     ("" "grffile" t)
+     ("" "longtable" nil)
+     ("" "wrapfig" nil)
+     ("" "rotating" nil)
+     ("normalem" "ulem" t)
+     ("" "amsmath" t)
+     ("" "textcomp" t)
+     ("" "amssymb" t)
+     ("" "capt-of" nil)
+     ("colorlinks=true" "hyperref" nil)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
