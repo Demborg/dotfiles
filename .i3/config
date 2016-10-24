@@ -41,8 +41,8 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+Shift+d exec --no-startup-id rofi -show window
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,run,ssh -show combi"
+# bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 
 
 #ska va som i3-demnu-desktop fast snabbare typ, coolt
@@ -107,7 +107,7 @@ set $5 5: 
 set $6 6
 set $7 7
 set $8 8
-set $9 9
+set $9 9: 
 set $10 10: 
 
 # switch to workspace
@@ -221,6 +221,7 @@ exec setxkbmap -option caps:escape
 
 #Koppla prtSc till shutter
 bindsym Print exec shutter -s 
+bindsym Shift Print exec kazam
 
 bindsym $mod+Pause exec --no-startup-id rofiPower.sh
 #Sätta bakgrundsbild
@@ -236,8 +237,11 @@ new_window 1pixel
 # browser pop-ups
 for_window [window_role="pop-up"] floating enable
 
+# float matlab figs
+for_window [class="MATLAB R2016a - academic use" title="^Fig"] floating enable
 # default workspaces
 #assign [class="spotify"] $10 #doesn't work :(
+
 
 #Run this command once in terminal to disable nautilus Desktop stuff, makes nautilus usable!
 #gsettings set org.gnome.desktop.background show-desktop-icons false

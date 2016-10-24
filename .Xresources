@@ -6,15 +6,15 @@
 rofi.color-enabled:                  true
 ! Rofi color meanings                bg            fg      bgalt         hlfg    hlbg
 ! Color scheme for normal row
-rofi.color-normal:                   argb:bb2f343f,#f3f4f5,argb:bb2f343f,#5294e2,#f3f4f5
+rofi.color-normal:                   argb:002f343f,#f3f4f5,argb:002f343f,#5294e2,#f3f4f5
 ! Color scheme for urgent row
-rofi.color-urgent:                   argb:bb2f343f,#e53935,argb:bb2f343f,#5294e2,#e53935
+rofi.color-urgent:                   argb:002f343f,#e53935,argb:002f343f,#e53935,#f3f4f5
 ! Color scheme for active row
-rofi.color-active:                   argb:bb2f343f,#676e7d,argb:bb2f343f,#5294e2,#676e7d
+rofi.color-active:                   argb:002f343f,#676e7d,argb:002f343f,#676e7d,#f3f4f5
 ! Color scheme window
-rofi.color-window:                   argb:bb2f343f,argb:bb2f343f 
+rofi.color-window:                   argb:aa2f343f,argb:aa2f343f 
 ! Separator style (none, dash, solid)
 rofi.separator-style:                none
 
-rofi.switchers: window,run,ssh
+rofi.switchers: window,run,ssh,combi
 
