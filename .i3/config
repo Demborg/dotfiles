@@ -30,8 +30,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# start ranger
-bindsym $mod+BackSpace exec i3-sensible-terminal -e ranger
+# start nautilus 
+bindsym $mod+BackSpace exec nautilus
 
 # kill focused window
 # bindsym $mod+Shift+q for_window [instance="scratchpad"] scratchpad show
@@ -105,7 +105,7 @@ set $2 2: 
 set $3 3: 
 set $4 4: 
 set $5 5: 
-set $6 6
+set $6 6: 
 set $7 7
 set $8 8: 
 set $9 9: 
